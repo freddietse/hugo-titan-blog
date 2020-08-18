@@ -1,0 +1,8 @@
+{{ define "main" }}
+<div class="container">
+    {{ range .Paginator.Pages }}
+    <h2><a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a></h2>
+    {{ end }}
+</div>
+
+{{ end }}
