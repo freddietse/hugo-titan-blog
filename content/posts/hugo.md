@@ -49,17 +49,44 @@ Hugo 内置了默认的语法高亮功能（基于 [Chroma](https://github.com/a
 </nav>
 ```
 
-#### SASS / SCSS
+#### SCSS + PostCSS +  tailwindcss
 
-第一步：安装 `extended` 版本的 Hugo，比如我的版本是 `hugo_extended_0.74.3_Windows-64bit` 。
+第 1 步：安装 `extended` 版本的 Hugo，比如我的版本是 `hugo_extended_0.74.3_Windows-64bit` 。
 
-第二步：创建 `yourtheme/assets/scss/` 目录，添加一个 `main.scss` 文件。
+第 2 步：全局安装 `postcss-cli` ：
 
-第三步：在 `yourtheme/layouts/partials/head.html` 中添加引用：
+```bash
+$ npm install -g postcss-cli
+```
+
+第 3 步：在 `yourtheme/` 目录中安装 tailwindcss：
+
+```bash
+$ npm install tailwindcss
+```
+
+第 4 步：在 `yourtheme/` 目录中创建 `postcss.config.js` 文件，然后引入 tailwindcss：
+
+```javascript
+module.exports = {
+  plugins: [require("tailwindcss")],
+};
+```
+
+第 5 步：在 `yourtheme/assets/scss/` 目录中添加 `main.scss` 文件，然后引入 tailwindcss：
+
+```scss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+第 6 步：在 `yourtheme/layouts/partials/head.html` 中添加引用：
 
 ```html
 <head>
-  {{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+	{{ $styles := resources.Get "scss/main.scss" | resources.ToCSS | resources.PostCSS (dict "config" "postcss.config.js") | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 </head>
 ```
+

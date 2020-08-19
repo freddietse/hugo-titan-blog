@@ -1,1 +1,1 @@
-.highlight>pre{padding:1rem}
+@tailwind base;@tailwind components;@tailwind utilities;.highlight>pre{padding:1rem}
