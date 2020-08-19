@@ -1,10 +1,35 @@
-<footer>
+<footer class="container mx-auto px-4 py-8 text-center">
     © 2020, Built with
     <a href="https://gohugo.io/" target="_blank" className="hover:underline">
         Hugo
     </a>
     &
-    <a href="https://v5.getbootstrap.com/" target="_blank" className="hover:underline">
-        Bootstrap 5
+    <a href="https://tailwindcss.com/" target="_blank" className="hover:underline">
+        tailwindcss
     </a>
 </footer>
+
+<script>
+    const wrapper = document.getElementById('wrapper');
+    const menuButton = document.getElementById('menuButton');
+    const overlay = document.getElementById('overlay');
+    let isShow = false;
+
+    menuButton.addEventListener('click', () => {
+        if (isShow) {
+            isShow = false;
+            menuButton.classList.remove('hamburger-menu-hover');
+            overlay.classList.remove('block');
+            overlay.classList.add('hidden');
+            wrapper.classList.remove('overflow-y-hidden');
+            wrapper.classList.add('overflow-y-auto');
+        } else {
+            isShow = true;
+            menuButton.classList.add('hamburger-menu-hover');
+            overlay.classList.remove('hidden');
+            overlay.classList.add('block');
+            wrapper.classList.remove('overflow-y-auto');
+            wrapper.classList.add('overflow-y-hidden');
+        }
+    })
+</script>

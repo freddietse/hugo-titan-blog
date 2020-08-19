@@ -4,6 +4,170 @@
 
 @tailwind utilities;
 
-.highlight>pre {
-    padding: 1rem;
+.highlight {
+    pre {
+        @apply p-4;
+        @apply overflow-x-auto;
+    }
+}
+
+body {
+    @apply subpixel-antialiased;
+    @apply tracking-wide;
+    @apply leading-loose;
+    @apply text-lg;
+    // font-family: "Noto Serif SC", serif;
+}
+
+.entry-content {
+
+    h1 {
+        @apply text-4xl;
+        @apply mb-10;
+        @apply mt-12;
+        @apply font-bold;
+    }
+
+    h2 {
+        @apply text-3xl;
+        @apply mb-8;
+        @apply mt-10;
+        @apply font-bold;
+    }
+
+    h3 {
+        @apply text-2xl;
+        @apply mb-6;
+        @apply mt-8;
+        @apply font-bold;
+    }
+
+    h4 {
+        @apply text-xl;
+        @apply mb-4;
+        @apply mt-6;
+        @apply font-bold;
+    }
+
+    ul,
+    ol {
+        @apply list-inside;
+        @apply mb-5;
+        @apply mt-5;
+    }
+
+    li {
+        @apply list-disc;
+        @apply mb-3;
+        @apply mt-3;
+        @apply break-all;
+    }
+
+    table {
+        @apply w-full;
+        @apply table-auto;
+        @apply text-left;
+        @apply mb-5;
+        @apply mt-5;
+    }
+
+    th {
+        @apply p-3;
+        @apply border;
+    }
+
+    p>code {
+        @apply text-pink-600;
+        @apply text-base;
+    }
+
+    p,
+    .highlight {
+        @apply mb-5;
+        @apply mt-5;
+        @apply break-all;
+    }
+
+}
+
+.entry-content a {
+    @apply underline;
+}
+
+.entry-content a:hover {
+    @apply text-black;
+}
+
+.entry-content blockquote {
+    @apply border-l-4;
+    @apply italic;
+    @apply bg-gray-100;
+    @apply p-4;
+    @apply mb-5;
+    @apply mt-5;
+}
+
+.entry-content blockquote p {
+    @apply m-0;
+}
+
+.entry-content figcaption {
+    @apply text-sm;
+    @apply text-gray-500;
+    @apply mt-3;
+    @apply text-center;
+}
+
+.big {
+    background-image: linear-gradient(120deg, #f4cf58, #f4cf58);
+    background-repeat: no-repeat;
+    background-size: 100% 0.4em;
+    background-position: 0 88%;
+    font-weight: inherit;
+    display: inline-block;
+    @apply leading-normal;
+}
+
+.entry-title {
+    @apply text-4xl;
+    @apply text-gray-900;
+    @apply font-bold;
+    @apply leading-normal;
+}
+
+
+/*Hamburger Button*/
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    @apply absolute;
+    @apply z-20;
+    top: 1rem;
+    right: 1rem;
+}
+
+.hamburger-menu .bar {
+    height: 3px;
+    border-radius: 5px;
+    margin: 2px 0px;
+    transform-origin: left;
+    transition: all 0.5s;
+    @apply bg-black;
+}
+
+.hamburger-menu-hover .top {
+    transform: rotate(45deg);
+}
+
+.hamburger-menu-hover .middle {
+    opacity: 0;
+}
+
+.hamburger-menu-hover .bottom {
+    transform: rotate(-45deg);
 }

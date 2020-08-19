@@ -1,8 +1,9 @@
 {{ define "main" }}
-<div class="container">
+<section>
     <article>
-        <header>
-            <h2>{{ .Title }}</h2>
+        <header class="mb-4">
+            <h2 class="entry-title"><a href="{{.Permalink}}">{{.Title}}</a></h2>
+            <time class="text-base text-gray-700">{{.Date.Format "2006-01-02"}}</time>
         </header>
         <div>{{ .TableOfContents }}</div>
         <div class="entry-content">
@@ -17,5 +18,5 @@
         <a href="{{.Permalink}}">{{.Title}}</a>
         {{ end }}
     </nav>
-</div>
+</section>
 {{ end }}

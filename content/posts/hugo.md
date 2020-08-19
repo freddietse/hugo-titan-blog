@@ -90,3 +90,13 @@ module.exports = {
 </head>
 ```
 
+#### 在 `a` 标签中添加 `target=_blank`
+
+在 `yourtheme/layouts/_default/_markup/render-link.html` 中添加如下代码：
+
+```html
+<a href="{{ .Destination | safeURL }}" {{ with .Title}} title="{{ . }}"
+    {{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"
+    {{ end }}>{{ .Text | safeHTML }}</a>
+```
+

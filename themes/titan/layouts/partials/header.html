@@ -1,3 +1,18 @@
-<header>
-    <h1><a href="/">{{.Site.Title}}</a></h1>
+<header class="h-64 bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
+    <div class="flex justify-center items-center px-4 relative h-full">
+        <h1><a href="/">{{.Site.Title}}</a></h1>
+        <div class="hamburger-menu" id="menuButton">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+        </div>
+    </div>
 </header>
+
+<div class="bg-white fixed top-0 left-0 z-10 h-screen w-full hidden flex justify-center items-center" id="overlay">
+    <nav class="flex flex-col">
+        <a href="/" class="py-3">Home</a>
+        <a href="/resources" class="py-3">Resources</a>
+        <a href="/about" class="py-3">About</a>
+    </nav>
+</div>
