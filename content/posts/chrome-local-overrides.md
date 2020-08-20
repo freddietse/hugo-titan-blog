@@ -5,6 +5,8 @@ date: "2020-08-13"
 
 Chrome 65 发布了 Local Overrides 功能。
 
+<!--more-->
+
 第一步：打开 DevTools ，找到 Sources 面板下的 Overrides 选项。
 
 第二步：在本地新建一个叫做 `local-overrides` 的文件夹。img_01.png

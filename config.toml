@@ -1,4 +1,10 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Welcome to my Blog"
+title = "Freddie Tse"
 theme="titan"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = true
+    startLevel = 3

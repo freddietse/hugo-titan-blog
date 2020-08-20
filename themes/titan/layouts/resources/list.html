@@ -1,6 +1,14 @@
 {{ define "main" }}
-<div class="container mx-auto px-64">
-    {{.Title}}
+<div class="">
+    <header class="mb-8">
+        <h2 class="entry-title">{{.Title}}</h2>
+        <time class="text-base text-gray-700">{{.Date.Format "2006-01-02"}}</time>
+    </header>
+    {{ if (.Params.toc) }}
+    <div>
+        {{.TableOfContents}}
+    </div>
+    {{ end }}
     <div class="entry-content">
         {{ .Content }}
     </div>

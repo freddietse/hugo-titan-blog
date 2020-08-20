@@ -1,6 +1,7 @@
 ---
 title: 'Homebrew - 最好用的 macOS 包管理器'
 date: '2020-08-15'
+toc: true
 ---
 
 Homebrew 是 macOS 上的一个包管理器，可以用命令行安装、卸载以及更新各种软件包，类似于 `centos` 的 `yum` 。

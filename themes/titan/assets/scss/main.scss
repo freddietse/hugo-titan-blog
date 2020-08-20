@@ -6,7 +6,7 @@
 
 .highlight {
     pre {
-        @apply p-4;
+        @apply p-5;
         @apply overflow-x-auto;
     }
 }
@@ -15,8 +15,8 @@ body {
     @apply subpixel-antialiased;
     @apply tracking-wide;
     @apply leading-loose;
-    @apply text-lg;
-    // font-family: "Noto Serif SC", serif;
+    @apply text-xl;
+    font-family: "Noto Serif SC", serif;
 }
 
 .entry-content {
@@ -71,7 +71,8 @@ body {
         @apply mt-5;
     }
 
-    th {
+    th,
+    td {
         @apply p-3;
         @apply border;
     }
@@ -123,7 +124,6 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 0.4em;
     background-position: 0 88%;
-    font-weight: inherit;
     display: inline-block;
     @apply leading-normal;
 }
@@ -133,8 +133,22 @@ body {
     @apply text-gray-900;
     @apply font-bold;
     @apply leading-normal;
+    @apply mb-1;
 }
 
+#TableOfContents {
+    @apply bg-gray-100;
+    @apply p-5;
+
+    ol {
+        @apply list-decimal;
+        @apply pl-5;
+
+        ol {
+            @apply pl-5;
+        }
+    }
+}
 
 /*Hamburger Button*/
 .hamburger-menu {

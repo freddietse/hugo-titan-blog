@@ -1,7 +1,10 @@
 ---
 title: "深入 Web 开发： Code snippets for CSS"
 date: '2017-08-30'
+toc: true
 ---
+
+<!--more-->
 
 #### .5px
 
@@ -145,3 +148,47 @@ date: '2017-08-30'
   float: left;
 }
 ```
+
+#### Hamburger Button
+
+```html
+<div class="hamburger-menu">
+  <div class="bar top"></div>
+  <div class="bar middle"></div>
+  <div class="bar bottom"></div>
+</div>
+```
+
+```css
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  height: 5px;
+  background: black;
+  border-radius: 5px;
+  margin: 3px 0px;
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
+.hamburger-menu:hover .top {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu:hover .middle {
+  opacity: 0;
+}
+
+.hamburger-menu:hover .bottom {
+  transform: rotate(-45deg);
+}
+```
+

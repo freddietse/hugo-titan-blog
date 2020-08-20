@@ -1,6 +1,7 @@
 ---
 title: "Resources"
 date: "2020-08-15"
+toc: true
 ---
 
 ### Development
@@ -35,6 +36,8 @@ date: "2020-08-15"
 
 - [JSDELIVR](https://www.jsdelivr.com/)
 - [UNPKG](https://unpkg.com/)
+- [Google Fonts 国内镜像](https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;900&display=swap)
+- [BootCDN](https://www.bootcdn.cn/)
 
 #### Picture compressions
 
@@ -81,4 +84,10 @@ date: "2020-08-15"
 
 ### 设计
 
+#### 配色
+
 - [uigradients](https://uigradients.com/)
+
+#### 图库
+
+- [Unsplash](https://unsplash.com/)

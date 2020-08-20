@@ -3,6 +3,10 @@ title: "NVM – Node.js 版本管理器"
 date: "2020-08-15"
 ---
 
+当我们开发和维护多个项目时，每个项目所依赖的 Node.js 版本肯定是不同的，NVM 可以管理多个 Node.js 版本。
+
+<!--more-->
+
 ### 安装配置
 
 第 1 步：下载 [nvm-windows](https://github.com/coreybutler/nvm-windows/releases) ( 推荐选择 `nvm-setup.zip` )。

@@ -3,15 +3,15 @@
     {{ range .Paginator.Pages }}
     <article class="mb-16">
         <header class="mb-4">
-            <h2 class="entry-title"><a href="{{.Permalink}}">{{.Title}}</a></h2>
-            <time class="text-base text-gray-700">{{.Date.Format "2006-01-02"}}</time>
+            <h2 class="entry-title duration-700 hover:text-yellow-500 hover:underline"><a
+                    href="{{.Permalink}}">{{.Title}}</a></h2>
+            <div class="text-base text-gray-700">
+                <time>{{.Date.Format "2006-01-02"}}</time>
+                ·
+                <span>{{.ReadingTime}} Minutes</span>
+            </div>
         </header>
-        <div class="mb-4">{{ .Summary }}</div>
-        {{ if .Truncated }}
-        <div>
-            <a href="{{ .RelPermalink }}">Read More</a>
-        </div>
-        {{ end }}
+        <div class="mb-4 text-gray-700">{{ .Summary }}</div>
     </article>
     {{ end }}
 </div>

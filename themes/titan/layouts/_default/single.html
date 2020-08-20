@@ -1,16 +1,24 @@
 {{ define "main" }}
 <section>
-    <article>
-        <header class="mb-4">
-            <h2 class="entry-title"><a href="{{.Permalink}}">{{.Title}}</a></h2>
-            <time class="text-base text-gray-700">{{.Date.Format "2006-01-02"}}</time>
+    <article class="mb-10">
+        <header class="mb-8">
+            <h2 class="entry-title">{{.Title}}</h2>
+            <div class="text-base text-gray-700">
+                <time>{{.Date.Format "2006-01-02"}}</time>
+                ·
+                <span>{{.ReadingTime}} Minutes</span>
+            </div>
         </header>
-        <div>{{ .TableOfContents }}</div>
+        {{ if (.Params.toc) }}
+        <div>
+            {{.TableOfContents}}
+        </div>
+        {{ end }}
         <div class="entry-content">
             {{ .Content }}
         </div>
     </article>
-    <nav>
+    <nav class="grid grid-cols-2 gap-8">
         {{ with .PrevInSection }}
         <a href="{{.Permalink}}">{{.Title}}</a>
         {{ end }}

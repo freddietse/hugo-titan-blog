@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello, world!</title>
-    {{/*  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;900&display=swap" rel="stylesheet" />  */}}
+    <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;900&display=swap" rel="stylesheet" />
     {{ $styles := resources.Get "scss/main.scss" | resources.ToCSS | resources.PostCSS (dict "config" "postcss.config.js") | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 

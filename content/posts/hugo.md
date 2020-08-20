@@ -1,19 +1,35 @@
 ---
 title: "Hugo: The world’s fastest framework for building websites"
 date: "2020-08-17"
-
+toc: true
 ---
+
+Hugo 是用 Go 语言编写的静态网站生成器，超快的编译速度、易于使用和可配置性是它最大的优势。
+
+<!--more-->
 
 ### 常用功能
 
 #### 目录（Table of Contents）
 
-Hugo 能够自动解析 Markdown 的内容，然后创建一个目录。
+Hugo 能够自动解析 Markdown 的内容，创建一个由标题组成目录。一般我们还会添加一个判断，只有当 Markdown 文档 Front Matter 的 `toc` 设置为 `true` 才显示目录。
 
 ```html
+{{ if (.Params.toc) }}
 <div>
-  {{ .TableOfContents }}
+	{{.TableOfContents}}
 </div>
+{{ end }}
+```
+
+我们可以在 `config.toml` 中对目录进行配置，仅适用于 Goldmark 渲染器：
+
+```toml
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 ```
 
 #### 语法高亮（Syntax Highlighting）
