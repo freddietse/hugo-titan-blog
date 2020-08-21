@@ -1,6 +1,7 @@
 ---
 title: "深入 Web 开发： Code snippets for JavaScript"
 date: "2017-08-30"
+toc: true
 ---
 
 <!--more-->

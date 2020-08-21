@@ -1,4 +1,4 @@
-<footer class="container mx-auto px-4 pb-8 text-center">
+<footer class="container mx-auto px-4 pb-8 text-center text-lg text-gray-700">
     © 2020, Built with
     <a href="https://gohugo.io/" target="_blank" className="hover:underline">
         Hugo
@@ -10,6 +10,8 @@
 </footer>
 
 <script>
+
+    // Hamburger Menu
     const wrapper = document.getElementById('wrapper');
     const menuButton = document.getElementById('menuButton');
     const overlay = document.getElementById('overlay');
@@ -31,5 +33,14 @@
             wrapper.classList.remove('overflow-y-auto');
             wrapper.classList.add('overflow-y-hidden');
         }
-    })
+    });
+
+    // Scroll to top
+    const scrollToTop = () => {
+        const c = document.documentElement.scrollTop || document.body.scrollTop;
+        if (c > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, c - c / 8);
+        }
+    };
 </script>

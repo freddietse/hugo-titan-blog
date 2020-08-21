@@ -1,5 +1,5 @@
 ---
-title: "Hugo: The world’s fastest framework for building websites"
+title: "Hugo 完全指南"
 date: "2020-08-17"
 toc: true
 ---
@@ -114,5 +114,29 @@ module.exports = {
 <a href="{{ .Destination | safeURL }}" {{ with .Title}} title="{{ . }}"
     {{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"
     {{ end }}>{{ .Text | safeHTML }}</a>
+```
+
+#### CODEPEN
+
+在 `yourtheme/layouts/shortcodes/codepen.html` 中添加如下代码：
+
+```html
+{{/* DEFAULTS */}}
+{{ $user    := "your_username" }}
+{{ $height  := 500 }}
+{{ $tab     := "result" }}{{/* html|css|js|result */}}
+{{ $theme   := 8862 }}{{/* create on codepen.io */}}
+
+
+<script
+    data-slug-hash="{{ .Get "id" }}"
+    data-user="{{ or (.Get "user") $user }}"
+    data-height="{{ or (.Get "height") $height }}"
+    data-default-tab="{{ or (.Get "tab") $tab }}"
+    data-theme-id="{{ or (.Get "theme") $theme }}"
+    class='codepen'
+    async
+    src="//codepen.io/assets/embed/ei.js"
+></script>
 ```
 

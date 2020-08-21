@@ -44,10 +44,6 @@ toc: true
 - [TinyPNG](https://tinypng.com/)
 - [TinyJPG](https://tinyjpg.com/)
 
-#### Illustrations
-
-- [unDraw](https://undraw.co/)
-
 #### Markdown Editor
 
 - [typora](https://www.typora.io/)
@@ -55,6 +51,7 @@ toc: true
 #### Code Editor
 
 - [StackBlitz](https://stackblitz.com/)
+- [CODEPEN](https://codepen.io/)
 
 #### Syntax Highlighting
 
@@ -91,3 +88,9 @@ toc: true
 #### 图库
 
 - [Unsplash](https://unsplash.com/)
+- [Pexels](https://www.pexels.com/)
+- [Pixabay](https://pixabay.com/)
+
+#### Illustrations
+
+- [unDraw](https://undraw.co/)
