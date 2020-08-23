@@ -159,10 +159,10 @@ body {
     height: 1.5rem;
     width: 1.5rem;
     cursor: pointer;
-    @apply absolute;
+    @apply fixed;
     @apply z-20;
-    top: 1rem;
-    right: 1rem;
+    top: 1.4rem;
+    left: 1.4rem;
 }
 
 .hamburger-menu .bar {
