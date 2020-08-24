@@ -12,7 +12,7 @@ Homebrew 是 macOS 上的一个包管理器，可以用命令行安装、卸载�
 
 如果按照官网的方法安装 Homebrew 的话，会提示如下的错误：
 
-![Homebrew](../images/img_01.png)
+![Homebrew](../../images/img_01.png)
 
 从错误信息来看是网络连接错误，但是我无论开全局代理还是更改 DNS 都没法解决这个问题。
 

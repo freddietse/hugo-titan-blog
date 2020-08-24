@@ -25,6 +25,11 @@ toc: true
 - [Simple Icons](https://simpleicons.org/)
 - [Styled Icons](https://styled-icons.js.org/)
 
+#### Mock API
+
+- [JSON Server](https://github.com/typicode/json-server)
+- [faker.js](https://github.com/marak/Faker.js/)
+
 #### CSS framework
 
 - [tailwindcss](https://tailwindcss.com/)
@@ -36,8 +41,14 @@ toc: true
 
 - [JSDELIVR](https://www.jsdelivr.com/)
 - [UNPKG](https://unpkg.com/)
-- [Google Fonts 国内镜像](https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;900&display=swap)
 - [BootCDN](https://www.bootcdn.cn/)
+- [前端静态资源库 - 75 CDN](https://cdn.baomitu.com/)
+
+#### Google Fonts
+
+- [Google Fonts](https://fonts.google.com/)
+- [Google Fonts 国内镜像](https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;900&display=swap)
+- [Google 字体库 - 75 CDN](https://cdn.baomitu.com/index/fonts)
 
 #### Picture compressions
 
