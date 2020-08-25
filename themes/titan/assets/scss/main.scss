@@ -185,3 +185,24 @@ body {
 .hamburger-menu-hover .bottom {
     transform: rotate(-45deg);
 }
+
+/*pagination*/
+.pagination {
+    @apply flex;
+    @apply justify-center;
+    @apply text-lg;
+    @apply text-gray-700;
+
+    .page-item {
+        @apply px-2;
+    }
+
+    .active {
+        color: #f4cf58;
+        @apply text-xl;
+    }
+
+    .disabled {
+        @apply text-gray-500;
+    }
+}

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="">
+    {{ range .Paginator.Pages }}
+    <article class="mb-20">
+        <header class="mb-4 flex flex-col items-center">
+            <h2 class="entry-title duration-700 hover:text-yellow-500 hover:underline"><a
+                    href="{{.Permalink}}">{{.Title}}</a></h2>
+            <div class="text-base text-gray-700 flex">
+                <time>{{.Date.Format "2006-01-02"}}</time>
+                <span class="px-2">·</span>
+                <span>{{.ReadingTime}} Minutes</span>
+            </div>
+        </header>
+        <div class="entry-content">{{ .Summary }}</div>
+    </article>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+</div>
+
+{{ end }}

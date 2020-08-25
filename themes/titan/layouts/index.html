@@ -1,6 +1,6 @@
 {{ define "main" }}
-<div class="">
-    {{ range .Paginator.Pages }}
+<div>
+    {{ range (.Paginator 1).Pages }}
     <article class="mb-20">
         <header class="mb-4 flex flex-col items-center">
             <h2 class="entry-title duration-700 hover:text-yellow-500 hover:underline"><a
@@ -14,6 +14,7 @@
         <div class="entry-content">{{ .Content }}</div>
     </article>
     {{ end }}
+    <div class="flex justify-center"><a href="/posts">All Articles</a></div>
 </div>
 
 {{ end }}
