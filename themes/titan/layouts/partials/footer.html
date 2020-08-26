@@ -1,11 +1,11 @@
 <footer class="container mx-auto px-4 pb-8 text-center text-base text-gray-700">
     © 2020, Built with
     <a href="https://gohugo.io/" target="_blank" class="hover:underline">
-        Hugo
+        Hugo 0.74.3
     </a>
     &
     <a href="https://tailwindcss.com/" target="_blank" class="hover:underline">
-        tailwindcss
+        tailwindcss 1.7.1
     </a>
 </footer>
 
@@ -34,13 +34,4 @@
             wrapper.classList.add('overflow-y-hidden');
         }
     });
-
-    // Scroll to top
-    const scrollToTop = () => {
-        const c = document.documentElement.scrollTop || document.body.scrollTop;
-        if (c > 0) {
-            window.requestAnimationFrame(scrollToTop);
-            window.scrollTo(0, c - c / 8);
-        }
-    };
 </script>
