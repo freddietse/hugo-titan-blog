@@ -8,3 +8,25 @@ theme="titan"
     endLevel = 4
     ordered = true
     startLevel = 3
+
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+  [[menu.nav]]
+    name = "Resources"
+    url = "/resources/"
+    weight = 3
+  [[menu.nav]]
+    name = "Knowledge Management"
+    url = "/km/"
+    weight = 4
+  [[menu.nav]]
+    name = "About"
+    url = "/about/"
+    weight = 5

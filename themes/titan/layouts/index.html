@@ -2,9 +2,8 @@
 <div>
     {{ range (.Paginator 1).Pages }}
     <article class="mb-20">
-        <header class="mb-4 flex flex-col items-center">
-            <h2 class="entry-title duration-700 hover:text-yellow-500 hover:underline"><a
-                    href="{{.Permalink}}">{{.Title}}</a></h2>
+        <header class="mb-4">
+            <h2 class=" entry-title mb-2"><a href="{{.Permalink}}">{{.Title}}</a></h2>
             <div class="text-base text-gray-700 flex">
                 <time>{{.Date.Format "2006-01-02"}}</time>
                 <span class="px-2">·</span>
@@ -14,7 +13,7 @@
         <div class="entry-content">{{ .Content }}</div>
     </article>
     {{ end }}
-    <div class="flex justify-center"><a href="/posts">All Articles</a></div>
+
 </div>
 
 {{ end }}

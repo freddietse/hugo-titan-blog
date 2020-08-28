@@ -10,6 +10,37 @@ Hugo 是用 Go 语言编写的静态网站生成器，超快的编译速度、�
 
 ### 常用功能
 
+#### 菜单高亮
+
+`config.toml`
+
+```toml
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+```
+
+`navbar.html`
+
+```html
+<nav>
+{{ $current := . }}
+{{ range .Site.Menus.nav }}
+  {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+  {{ $active = or $active (eq .Name $current.Title) }}
+  {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "posts")) }}
+  {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+  <a href="{{ .URL }}" class="{{ if $active }}active{{ end }}">{{ .Name }}</a>
+{{ end }}
+</nav>
+```
+
 #### 分页（Pagination）
 
 ```html

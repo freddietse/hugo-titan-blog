@@ -1,4 +1,4 @@
-<footer class="container mx-auto px-4 pb-8 text-center text-base text-gray-700">
+<footer class="pt-8 text-base text-gray-700">
     © 2020, Built with
     <a href="https://gohugo.io/" target="_blank" class="hover:underline">
         Hugo 0.74.3
@@ -8,30 +8,3 @@
         tailwindcss 1.7.1
     </a>
 </footer>
-
-<script>
-
-    // Hamburger Menu
-    const wrapper = document.getElementById('wrapper');
-    const menuButton = document.getElementById('menuButton');
-    const overlay = document.getElementById('overlay');
-    let isShow = false;
-
-    menuButton.addEventListener('click', () => {
-        if (isShow) {
-            isShow = false;
-            menuButton.classList.remove('hamburger-menu-hover');
-            overlay.classList.remove('block');
-            overlay.classList.add('hidden');
-            wrapper.classList.remove('overflow-y-hidden');
-            wrapper.classList.add('overflow-y-auto');
-        } else {
-            isShow = true;
-            menuButton.classList.add('hamburger-menu-hover');
-            overlay.classList.remove('hidden');
-            overlay.classList.add('block');
-            wrapper.classList.remove('overflow-y-auto');
-            wrapper.classList.add('overflow-y-hidden');
-        }
-    });
-</script>

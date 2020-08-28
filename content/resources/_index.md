@@ -95,6 +95,7 @@ toc: true
 #### 配色
 
 - [uigradients](https://uigradients.com/)
+- [Gradient Magic](https://www.gradientmagic.com/)
 
 #### 图库
 
