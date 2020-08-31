@@ -15,6 +15,12 @@ toc: true
 - [30 seconds of code](https://www.30secondsofcode.org/)
 - [DEV](https://dev.to/)
 
+#### Placehold
+
+- [Placeholder](https://placeholder.com/)
+- [temp.im](http://temp.im/)
+- [lorempixel](http://lorempixel.com/)
+
 #### Icons
 
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
@@ -42,13 +48,17 @@ toc: true
 - [JSDELIVR](https://www.jsdelivr.com/)
 - [UNPKG](https://unpkg.com/)
 - [BootCDN](https://www.bootcdn.cn/)
-- [前端静态资源库 - 75 CDN](https://cdn.baomitu.com/)
+- [75 CDN 前端静态资源库](https://cdn.baomitu.com/)
+- [字节跳动静态资源公共库](https://cdn.bytedance.com/)
+- [Staticfile CDN](http://staticfile.org/)
+- [jscdn](http://jscdn.upai.com/)
+- [css.loli.net](https://sb.sb/blog/css-cdn/)
 
 #### Google Fonts
 
 - [Google Fonts](https://fonts.google.com/)
 - [Google Fonts 国内镜像](https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;900&display=swap)
-- [Google 字体库 - 75 CDN](https://cdn.baomitu.com/index/fonts)
+- [75 CDN Google 字体库](https://cdn.baomitu.com/index/fonts)
 
 #### Picture compressions
 
