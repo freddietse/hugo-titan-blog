@@ -22,13 +22,13 @@
         {{ with .PrevInSection }}
         <div class="mb-6">
             <div class="text-base mb-2">上一篇</div>
-            <a class="font-bold duration-700 hover:text-yellow-500 hover:underline" href="{{.Permalink}}">{{.Title}}</a>
+            <a class="font-bold" href="{{.Permalink}}">{{.Title}}</a>
         </div>
         {{ end }}
         {{ with .NextInSection }}
         <div class="">
             <div class="text-base mb-2 md:text-right">下一篇</div>
-            <a class="font-bold duration-700 hover:text-yellow-500 hover:underline" href="{{.Permalink}}">{{.Title}}</a>
+            <a class="font-bold" href="{{.Permalink}}">{{.Title}}</a>
         </div>
         {{ end }}
     </div>
