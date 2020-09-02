@@ -8,7 +8,7 @@
         {{- partial "header.html" . -}}
     </div>
     <main id="content"
-        class="p-4 lg:p-8 min-h-screen lg:overflow-y-scroll col-span-12 lg:col-span-7 row-span-8 lg:row-span-12 flex flex-col">
+        class="p-4 lg:p-8 lg:min-h-screen lg:overflow-y-scroll col-span-12 lg:col-span-7 row-span-8 lg:row-span-12 flex flex-col">
         <nav class="mb-10">
             {{ $current := . }}
             {{ range .Site.Menus.nav }}
