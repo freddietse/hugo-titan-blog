@@ -11,7 +11,7 @@ Scrapy 是一个用 Python 编写的开源网络爬虫框架。
 
 #### 安装 Scrapy
 
-Windows 上安装 Scrapy 最好的方式是使用 Anaconda ，而不是 `pip`，这样可以避免大多数安装问题。
+安装 Scrapy 最好的方式是使用 Anaconda ，而不是 `pip`，这样可以避免大多数安装问题。
 
 a. 安装 [Anaconda](https://www.anaconda.com/products/individual)
 
