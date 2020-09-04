@@ -73,6 +73,7 @@ toc: true
 
 - [StackBlitz](https://stackblitz.com/)
 - [CODEPEN](https://codepen.io/)
+- [JetBrain 激活码](http://idea.medeming.com/jets/)
 
 #### Syntax Highlighting
 
@@ -95,10 +96,11 @@ toc: true
 - [Clash for Android](https://github.com/Kr328/ClashForAndroid)
 - Shadowrocket ( App Store ) 
 
-### Games
+### 游戏 Games
 
 - [NGA玩家社区](https://bbs.nga.cn/)
 - [巴哈姆特](https://www.gamer.com.tw/)
+- [TapTap](https://www.taptap.com/)
 
 ### 设计
 
@@ -113,6 +115,15 @@ toc: true
 - [Pexels](https://www.pexels.com/)
 - [Pixabay](https://pixabay.com/)
 
-#### Illustrations
+#### 插图 Illustrations
 
 - [unDraw](https://undraw.co/)
+- [GoDaddy](https://sg.godaddy.com/zh)
+- [Vultr](https://www.vultr.com/)
+
+#### 影音
+
+- [低端影视](https://ddrk.me/)
+- [看片狂人](https://www.kpkuang.com/)
+- [MyFreeMP3](http://tool.liumingye.cn/music/)
+- [You-Get](https://you-get.org/)
