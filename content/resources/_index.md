@@ -4,6 +4,12 @@ date: "2020-08-15"
 toc: true
 ---
 
+- 端傳媒
+- [财新周刊](http://weekly.caixin.com/)
+- [三联生活周刊](http://www.lifeweek.com.cn/)
+- [reddit](https://www.reddit.com/)
+- [Quora](https://www.quora.com/)
+
 ### Development
 
 #### Community
@@ -101,6 +107,7 @@ toc: true
 - [NGA玩家社区](https://bbs.nga.cn/)
 - [巴哈姆特](https://www.gamer.com.tw/)
 - [TapTap](https://www.taptap.com/)
+- [Gamerch](https://gamerch.com/)
 
 ### 设计
 
@@ -114,16 +121,23 @@ toc: true
 - [Unsplash](https://unsplash.com/)
 - [Pexels](https://www.pexels.com/)
 - [Pixabay](https://pixabay.com/)
+- [Splitshire](https://www.splitshire.com/)
 
 #### 插图 Illustrations
 
 - [unDraw](https://undraw.co/)
 - [GoDaddy](https://sg.godaddy.com/zh)
 - [Vultr](https://www.vultr.com/)
+- [Screely](https://www.screely.com/)
 
 #### 影音
 
+- [聚BT](https://jubt.gq/)
 - [低端影视](https://ddrk.me/)
 - [看片狂人](https://www.kpkuang.com/)
 - [MyFreeMP3](http://tool.liumingye.cn/music/)
 - [You-Get](https://you-get.org/)
+- [在线之家](https://www.zxzj.me/)
+- [今月から、スタジオジブリ作品の場面写真の提供を開始します](http://www.ghibli.jp/info/013344/)
+- [Best Practices for Designing a Pragmatic RESTful API](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+- [Updating the Coding standards for modern PHP](https://make.wordpress.org/core/2020/03/20/updating-the-coding-standards-for-modern-php/)
