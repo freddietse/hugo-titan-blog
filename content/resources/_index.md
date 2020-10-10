@@ -93,6 +93,7 @@ toc: true
 - [Nuxt](https://nuxtjs.org/)
 - [Gatsby](http://gatsbyjs.org)
 - [Hugo](https://gohugo.io/)
+- [Open-source self-hosted comments for a static website](https://lisakov.com/projects/open-source-comments/)
 
 #### 代理客户端
 
@@ -141,3 +142,16 @@ toc: true
 - [今月から、スタジオジブリ作品の場面写真の提供を開始します](http://www.ghibli.jp/info/013344/)
 - [Best Practices for Designing a Pragmatic RESTful API](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 - [Updating the Coding standards for modern PHP](https://make.wordpress.org/core/2020/03/20/updating-the-coding-standards-for-modern-php/)
+- [在中国看 Netflix（网飞），看这一篇就够了](https://blog.shuziyimin.org/16)
+- [如何购买港台电子书？](https://www.ymdie.com/archives/32219)
+
+### 独立博客
+
+- [中文博客圈](https://blog.huhexian.com/)
+- [数字移民](https://blog.shuziyimin.org/)
+- [雜文宅](https://www.baichr.com/)
+- [罗磊的独立博客](https://luolei.org/)
+- [酷壳](https://coolshell.cn/)
+- [Mark's Blog](https://www.quchao.net/)
+- [TSBBLOG](https://tsb2blog.com/)
+

@@ -11,14 +11,14 @@ toc: true
 #### .5px
 
 ```html
-<div class="line"></div>
+<div class="hairline--top"></div>
 ```
 
 ```css
-.line {
+.hairline--top {
   position: relative;
 }
-.line::after {
+.hairline--top::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -27,7 +27,7 @@ toc: true
   height: 1px;
   background-color: red;
   transform: scale(1,.5);
-  transform-origin: center bottom
+  transform-origin: center bottom;
 }
 ```
 
