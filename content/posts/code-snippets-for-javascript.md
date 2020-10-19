@@ -4,7 +4,30 @@ date: "2017-08-30"
 toc: true
 ---
 
+本文整理了日常开发中经常用到的 JavaScript 代码片段。
+
 <!--more-->
+
+#### 判断当前时间是否处于某个时间段内
+
+```javascript
+function isDuringDate(beginDateStr, endDateStr) {
+  const curDate = new Date();
+  const beginDate = new Date(beginDateStr);
+  const endDate = new Date(endDateStr);
+  if (curDate >= beginDate && curDate <= endDate) {
+    return true;
+  }
+  return false;
+}
+
+isDuringDate('2018/09/17', '2030/09/17');
+// true
+isDuringDate('2018/09/17 13:00', '2019/09/17 15:00');
+// false
+```
+
+1. *js 判断当前时间是否处于某个时间段内, [https://www.cnblogs.com/sirdong/p/11542153.html](https://www.cnblogs.com/sirdong/p/11542153.html), 2019-09-18*
 
 ### Array
 
