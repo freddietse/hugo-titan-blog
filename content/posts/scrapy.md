@@ -56,3 +56,17 @@ tutorial/
 $ scrapy crawl quotes
 ```
 
+### 导出 JSON 文件
+
+```bash
+$ scrapy crawl your_spider_name -o data.json
+```
+
+如果需要在 JSON 文件中显示中文，只要在 `setting.py ` 文件中设置：
+
+```python
+FEED_EXPORT_ENCODING = 'utf-8'
+```
+
+
+

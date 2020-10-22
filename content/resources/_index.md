@@ -9,6 +9,7 @@ toc: true
 - [三联生活周刊](http://www.lifeweek.com.cn/)
 - [reddit](https://www.reddit.com/)
 - [Quora](https://www.quora.com/)
+- [PTT](https://pttweb.tw/)
 
 ### Development
 
@@ -95,24 +96,33 @@ toc: true
 - [Hugo](https://gohugo.io/)
 - [Open-source self-hosted comments for a static website](https://lisakov.com/projects/open-source-comments/)
 
-#### 代理客户端
+#### 代理
 
 - [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg)
 - [V2RayN](https://github.com/2dust/v2rayN)
 - [clashX](https://github.com/yichengchen/clashX)
 - [Clash for Android](https://github.com/Kr328/ClashForAndroid)
-- Shadowrocket ( App Store ) 
+- Shadowrocket ( App Store )
+
+#### 其他
+
+- [语义化版本 2.0.0](https://semver.org/lang/zh-CN/)
+- [Best Practices for Designing a Pragmatic RESTful API](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+- [Updating the Coding standards for modern PHP](https://make.wordpress.org/core/2020/03/20/updating-the-coding-standards-for-modern-php/)
 
 ### 游戏 Games
 
-- [NGA玩家社区](https://bbs.nga.cn/)
+- [NGA 玩家社区](https://bbs.nga.cn/)
 - [巴哈姆特](https://www.gamer.com.tw/)
 - [TapTap](https://www.taptap.com/)
+- [FANDOM](https://www.fandom.com/explore-zh-tw?uselang=zh-tw)
 - [Gamerch](https://gamerch.com/)
+- [GameKee](https://www.gamekee.com/)
+- [8591](https://www.8591.com.tw/)：台湾最大的游戏交易平台
 
-### 设计
+### 设计 Design
 
-#### 配色
+#### 配色 Coloring Scheme
 
 - [uigradients](https://uigradients.com/)
 - [Gradient Magic](https://www.gradientmagic.com/)
@@ -133,19 +143,17 @@ toc: true
 
 #### 影音
 
-- [聚BT](https://jubt.gq/)
+- [聚 BT](https://jubt.gq/)
 - [低端影视](https://ddrk.me/)
 - [看片狂人](https://www.kpkuang.com/)
 - [MyFreeMP3](http://tool.liumingye.cn/music/)
 - [You-Get](https://you-get.org/)
 - [在线之家](https://www.zxzj.me/)
 - [今月から、スタジオジブリ作品の場面写真の提供を開始します](http://www.ghibli.jp/info/013344/)
-- [Best Practices for Designing a Pragmatic RESTful API](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
-- [Updating the Coding standards for modern PHP](https://make.wordpress.org/core/2020/03/20/updating-the-coding-standards-for-modern-php/)
 - [在中国看 Netflix（网飞），看这一篇就够了](https://blog.shuziyimin.org/16)
 - [如何购买港台电子书？](https://www.ymdie.com/archives/32219)
 
-### 独立博客
+### 独立博客 Blog
 
 - [中文博客圈](https://blog.huhexian.com/)
 - [数字移民](https://blog.shuziyimin.org/)
@@ -154,4 +162,3 @@ toc: true
 - [酷壳](https://coolshell.cn/)
 - [Mark's Blog](https://www.quchao.net/)
 - [TSBBLOG](https://tsb2blog.com/)
-

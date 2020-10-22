@@ -27,4 +27,4 @@ Hugo / tailwindcss / Netlify
 
 ### Fonts
 
-Noto Serif SC（思源宋体）on Google Fonts
+Noto Serif SC（思源宋体）

@@ -11,6 +11,8 @@
             </div>
         </header>
         <div class="entry-content">{{ .Summary }}</div>
+
+        <div><a href="{{.Permalink}}" class="underline text-base text-gray-700">查看全文</a></div>
     </article>
     {{ end }}
     {{ template "_internal/pagination.html" . }}
