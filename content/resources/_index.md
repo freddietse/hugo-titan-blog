@@ -118,7 +118,8 @@ toc: true
 - [FANDOM](https://www.fandom.com/explore-zh-tw?uselang=zh-tw)
 - [Gamerch](https://gamerch.com/)
 - [GameKee](https://www.gamekee.com/)
-- [8591](https://www.8591.com.tw/)：台湾最大的游戏交易平台
+- [8591](https://www.8591.com.tw/)
+- [PLUG](https://www.plug.game/)
 
 ### 设计 Design
 

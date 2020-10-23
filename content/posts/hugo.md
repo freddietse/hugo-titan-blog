@@ -30,24 +30,21 @@ Hugo 是用 Go 语言编写的静态网站生成器，超快的编译速度、�
 
 ```html
 <nav>
-{{ $current := . }}
-{{ range .Site.Menus.nav }}
-  {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
-  {{ $active = or $active (eq .Name $current.Title) }}
-  {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "posts")) }}
-  {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+  {{ $current := . }} {{ range .Site.Menus.nav }} {{ $active := or
+  ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }} {{
+  $active = or $active (eq .Name $current.Title) }} {{ $active = or $active (and
+  (eq .Name "Blog") (eq $current.Section "posts")) }} {{ $active = or $active
+  (and (eq .Name "Tags") (eq $current.Section "tags")) }}
   <a href="{{ .URL }}" class="{{ if $active }}active{{ end }}">{{ .Name }}</a>
-{{ end }}
+  {{ end }}
 </nav>
 ```
 
 #### 分页（Pagination）
 
 ```html
-{{ template "_internal/pagination.html" . }}
-{{ range .Paginator.Pages }}
-   {{ .Title }}
-{{ end }}
+{{ template "_internal/pagination.html" . }} {{ range .Paginator.Pages }} {{
+.Title }} {{ end }}
 ```
 
 #### 目录（Table of Contents）
@@ -56,9 +53,7 @@ Hugo 能够自动解析 Markdown 的内容，创建一个由标题组成目录�
 
 ```html
 {{ if (.Params.toc) }}
-<div>
-	{{.TableOfContents}}
-</div>
+<div>{{.TableOfContents}}</div>
 {{ end }}
 ```
 
@@ -96,16 +91,15 @@ Hugo 内置了默认的语法高亮功能（基于 [Chroma](https://github.com/a
 
 ```html
 <nav>
-    {{ with .PrevInSection }}
-    <a href="{{.Permalink}}">{{.Title}}</a>
-    {{ end }}
-    {{ with .NextInSection }}
-    <a href="{{.Permalink}}">{{.Title}}</a>
-    {{ end }}
+  {{ with .PrevInSection }}
+  <a href="{{.Permalink}}">{{.Title}}</a>
+  {{ end }} {{ with .NextInSection }}
+  <a href="{{.Permalink}}">{{.Title}}</a>
+  {{ end }}
 </nav>
 ```
 
-#### SCSS + PostCSS +  tailwindcss
+#### SCSS + PostCSS + tailwindcss
 
 第 1 步：安装 `extended` 版本的 Hugo，比如我的版本是 `hugo_extended_0.74.3_Windows-64bit` 。
 
@@ -141,8 +135,15 @@ module.exports = {
 
 ```html
 <head>
-	{{ $styles := resources.Get "scss/main.scss" | resources.ToCSS | resources.PostCSS (dict "config" "postcss.config.js") | minify | fingerprint }}
-	<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  {{ $styles := resources.Get "scss/main.scss" | resources.ToCSS |
+  resources.PostCSS (dict "config" "postcss.config.js") | minify | fingerprint
+  }}
+  <link
+    rel="stylesheet"
+    href="{{ $styles.Permalink }}"
+    integrity="{{ $styles.Data.Integrity }}"
+    media="screen"
+  />
 </head>
 ```
 
@@ -180,3 +181,22 @@ module.exports = {
 ></script>
 ```
 
+#### [拓展 hugo 的 markdown 流程图 mermaid](https://kentxxq.com/contents/%E6%8B%93%E5%B1%95hugo%E7%9A%84markdown_%E6%B5%81%E7%A8%8B%E5%9B%BEmermaid/)
+
+```html
+<!--head部分添加-->
+<script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
+```
+
+在 `shortcodes` 目录下新建 `mermaid.html` 文件
+
+```html
+<!--mermaid.html-->
+<div class="mermaid" align="{{ if .Get "align" }}
+                                {{ .Get "align" }}
+                            {{ else }}
+                                center
+                            {{ end }}">
+    {{ safeHTML .Inner }}
+</div>
+```

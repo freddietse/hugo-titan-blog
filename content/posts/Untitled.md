@@ -102,15 +102,43 @@ getUserData
   });
 ```
 
-每个 Promise 都会经历一个短暂的生命周期：先是处于进行中（pending）的状态，一旦异步操作结束就会进入已完成（fulfilled）或者已拒绝（rejected）的状态。
+每个 Promise 都会经历一个短暂的生命周期：先是处于待定（pending）的状态，一旦异步操作结束就会进入兑现（fulfilled）或拒绝（rejected）的状态。需要注意的是，一旦进入其中一种状态后就不可逆了。
+
+{{< mermaid >}}
+graph LR
+A["Promise"]
+B["pending"]
+C["fulfilled"]
+D["rejected"]
+A-->B
+B-->C
+B-->D
+
+{{< /mermaid >}}
 
 #### 创建 Promise
 
-new Promise()
+用 Promise 构造函数可以创建一个新的 Promise，构造器函数接受一个执行器函数作为参数。该执行器函数也接受两个参数，分别是执行成功时调用的 `resolve()` 函数和执行失败时调用的 `reject()` 函数。
 
-Promise.resolve()
+接下来，我们将使用 Promise 封装 ajax 请求。
 
-Promise.reject()
+```javascript
+const getUserData = new Promise((resolve, reject) => {
+  $.ajax({
+    url: "https://api.github.com/users/giuhub",
+    dataType: "json",
+    type: "GET",
+    success(resp) {
+      resolve(resp);
+    },
+    error(error) {
+      reject(error);
+    },
+  });
+});
+```
+
+很简单的代码，如何使用呢？
 
 #### 链式调用
 
