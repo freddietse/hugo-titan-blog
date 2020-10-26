@@ -13,7 +13,7 @@ JavaScript 引擎是基于单线程（Single-threaded）事件循环的概念构
 
 <!--more-->
 
-### 事件模型
+## 事件模型
 
 事件模型是 JavaScript 最基础的异步编程形式，任务执行的先后顺序取决于某个事件是否发生。
 
@@ -30,7 +30,7 @@ console.log("World");
 
 事件模型适用于处理简单的交互，对于复杂的业务场景来说却不是很灵活，很少人会用这种方法进行异步编程。
 
-### 回调函数（Callback）
+## 回调函数（Callback）
 
 在 ECMAScript 2015 之前，开发者主要使用回调函数进行异步编程，比如使用 Ajax 请求 API。这种方式最大的问题是，嵌套过多很容易陷入回调地狱（Callback Hell），代码维护起来简直是噩梦。
 
@@ -61,46 +61,11 @@ $.ajax({
 
 如果想要实现更复杂的功能，回调函数的局限性就会显性出来。例如，并行执行两个异步操作，只取优先完成的操作结果。在这种情况下回调函数实现起来很困难，而 Promise 只需要使用 `Promise.race()` 方法即可。
 
-### Promise
+## Promise
 
-```javascript
-const getUserData = new Promise((resolve, reject) => {
-  $.ajax({
-    url: "https://api.github.com/users/giuhub",
-    dataType: "json",
-    type: "GET",
-    success(resp) {
-      resolve(resp);
-    },
-    error(error) {
-      reject(error);
-    },
-  });
-});
+ECMAScript 2015 发布的 Promise 是具有划时代意义的，从此以后，JavaScript 异步编程不再依赖回调函数。Promise 的应用遍地开花，例如， Fetch API 返回的是 Promise，Async 函数返回的也是 Promise，各种 HTTP 类库比如 axios 全都支持 Promise。
 
-const getUserFollowers = new Promise((resolve, reject) => {
-  $.ajax({
-    url: "https://api.github.com/users/giuhub/followers",
-    dataType: "json",
-    type: "GET",
-    success(resp) {
-      resolve(resp);
-    },
-    error(error) {
-      reject(error);
-    },
-  });
-});
-
-getUserData
-  .then((v) => {
-    console.log(v);
-    return getUserFollowers;
-  })
-  .then((v) => {
-    console.log(v);
-  });
-```
+### Promise 的生命周期
 
 每个 Promise 都会经历一个短暂的生命周期：先是处于待定（pending）的状态，一旦异步操作结束就会进入兑现（fulfilled）或拒绝（rejected）的状态。需要注意的是，一旦进入其中一种状态后就不可逆了。
 
@@ -116,60 +81,70 @@ B-->D
 
 {{< /mermaid >}}
 
-#### 创建 Promise
+### 创建 Promise
 
-用 Promise 构造函数可以创建一个新的 Promise，构造器函数接受一个执行器函数作为参数。该执行器函数也接受两个参数，分别是执行成功时调用的 `resolve()` 函数和执行失败时调用的 `reject()` 函数。
+用 Promise 构造函数可以创建一个新的 Promise，构造函数接受一个执行器函数作为参数。该执行器函数也接受两个参数，分别是执行成功时调用的 `resolve()` 函数和执行失败时调用的 `reject()` 函数。
 
-接下来，我们将使用 Promise 封装 ajax 请求。
+以下这个示例将使用 Promise 来封装 Ajax：
 
 ```javascript
-const getUserData = new Promise((resolve, reject) => {
-  $.ajax({
-    url: "https://api.github.com/users/giuhub",
-    dataType: "json",
-    type: "GET",
-    success(resp) {
-      resolve(resp);
-    },
-    error(error) {
-      reject(error);
-    },
+const get = (url) => {
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: url,
+      dataType: "json",
+      type: "GET",
+      success(resp) {
+        resolve(resp);
+      },
+      error(error) {
+        reject(error);
+      },
+    });
   });
-});
+};
 ```
 
-很简单的代码，如何使用呢？
+在这个示例中，用 Promise 包裹了一个 Ajax。如果请求成功，在 Ajax 的 `success()` 回调函数中执行 `resolve()` 函数，将服务器返回的内容作为参数；如果请求失败，在 Ajax 的 `error()` 回调函数中执行 `reject()` 函数，将捕获到错误信息作为参数。
 
-#### 链式调用
+### 串联 Promise
 
-##### Promise.prototype.then()
+Promise 构造函数的原型对象上定义了三个方法，它们分别是 `then()` 、`catch()` 、`finally()`。
 
-`then()` 方法接受两个可选的参数：第一个是 Promise 状态变为 fulfilled 时的回调函数；第二个是 Promise 状态变为 rejected 时的回调函数。
+#### Promise.prototype.then()
 
-`then()` 方法返回一个新的 Promise 实例。上一个 Promise 状态发生变化后（fulfilled 或者 rejected），返回值会作为参数传递给下一个 `then()` 。
+`then()` 方法方法返回一个新的 Promise 实例，该方法接受两个可选的参数：第一个是 Promise 状态变为 fulfilled 时的回调函数；第二个是 Promise 状态变为 rejected 时的回调函数。
 
 ```javascript
 let p1 = new Promise((resolve) => setTimeout(() => resolve(44), 6000));
 let p2 = new Promise((resolve) => setTimeout(() => resolve(45), 3000));
 
-p1.then((value) => {
-  console.log(value);
-  return p2;
-}).then((value) => {
-  console.log(value);
-});
+p1.then(
+  (value) => {
+    console.log(value);
+    return p2;
+  },
+  (error) => console.log(error)
+).then(
+  (value) => {
+    console.log(value);
+  },
+  (error) => console.log(error)
+);
 
 // 44
 // 45
 ```
 
-##### Promise.prototype.catch()
+从上面的示例中可以得出结论，上一个 Promise 状态发生变化后（fulfilled 或者 rejected），下一个 Promise 才会被解决，返回值会作为参数传递给下一个 `then()` 。这个特征在实际的开发场景中很实用，比如 B 接口需要依赖 A 接口返回的内容。
 
-`catch()` 方法返回一个 Promise，该方法接受一个参数：Promise 状态变为 rejected 时的回调函数。事实上，`catch()` 方法和 `then(undefined, onRejected)` 的作用是一样的。
+#### Promise.prototype.catch()
 
-##### Promise.prototype.finally()
+`catch()` 方法返回一个新的 Promise 实例，该方法接受一个参数：Promise 状态变为 rejected 时的回调函数。事实上，`catch()` 方法和 `then(undefined, onRejected)` 的作用是一样的。
 
-`finally()` 方法返回一个 Promise ，该方法接受一个参数：Promise 状态变为 fulfilled 或 rejected 时的回调函数。
+#### Promise.prototype.finally()
+
+`finally()` 方法返回一个新的 Promise 实例 ，该方法接受一个参数：Promise 状态变为 fulfilled 或 rejected 时的回调函数。
 
 ```javascript
 let p = Promise.resolve(42);
@@ -182,9 +157,11 @@ p.then((value) => console.log(value))
 // 返回状态为 resolved 或 rejected
 ```
 
-#### 响应多个 Promise
+### 监听多个 Promise
 
-##### Promise.all()
+`Promise.all()` 和 `Promise.race()` 可以监听多个 Promise。
+
+#### Promise.all()
 
 `Promise.all()` 接受一个参数并返回一个 Promise 实例，该参数是一个包含多个受监视 Promise 的可迭代对象（例如一个数组），只有当可迭代对象中所有 Promise 都被解决后返回的 Promise 实例才会被完成。
 
@@ -216,7 +193,7 @@ p4.then((value) => console.log(value));
 // Uncaught (in promise) 43
 ```
 
-##### Promise.race()
+#### Promise.race()
 
 `Promise.race()` 和 `Promise.all()` 类似，也是接受一个参数并返回一个 Promise 实例，参数是一个以若干个 Promise 组成的可迭代对象。不同的地方是，`Promise.race()` 只要可迭代对象中有一个 Promise 被解决，返回的 Promise 实例就会被完成。
 
@@ -232,45 +209,9 @@ p4.then((value) => console.log(value));
 // 42
 ```
 
-### Generator
+## Generator
 
-### Async
-
-```javascript
-const getUserData = new Promise((resolve, reject) => {
-  $.ajax({
-    url: "https://api.github.com/users/giuhub",
-    dataType: "json",
-    type: "GET",
-    success(resp) {
-      resolve(resp);
-    },
-    error(error) {
-      reject(error);
-    },
-  });
-});
-
-const getUserFollowers = new Promise((resolve, reject) => {
-  $.ajax({
-    url: "https://api.github.com/users/giuhub/followers",
-    dataType: "json",
-    type: "GET",
-    success(resp) {
-      resolve(resp);
-    },
-    error(error) {
-      reject(error);
-    },
-  });
-});
-
-const f = async () => {
-  await getUserData.then((v) => console.log(v));
-  await getUserFollowers.then((v) => console.log(v));
-};
-f();
-```
+## Async
 
 async 函数是 JavaScript 异步编程的最终解决方案。
 
