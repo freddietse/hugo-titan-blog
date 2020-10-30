@@ -163,3 +163,4 @@ toc: true
 - [酷壳](https://coolshell.cn/)
 - [Mark's Blog](https://www.quchao.net/)
 - [TSBBLOG](https://tsb2blog.com/)
+- [Free Favicon Maker](https://formito.com/tools/favicon)

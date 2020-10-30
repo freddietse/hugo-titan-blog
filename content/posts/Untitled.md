@@ -63,7 +63,7 @@ $.ajax({
 
 ## Promise
 
-ECMAScript 2015 发布的 Promise 是具有划时代意义的，从此以后，JavaScript 异步编程不再依赖回调函数。Promise 的应用遍地开花，例如， Fetch API 返回的是 Promise，Async 函数返回的也是 Promise，各种 HTTP 类库比如 axios 全都支持 Promise。
+ECMAScript 2015 发布了具有划时代意义的 Promise，它让 JavaScript 异步编程不再依赖回调函数。大多数新的 Web API（比如 Fetch API）、Async/Await、HTTP 类库（ 比如 axios） 都基于 Promise 构建。
 
 ### Promise 的生命周期
 
