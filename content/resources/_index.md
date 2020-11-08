@@ -113,14 +113,18 @@ toc: true
 
 ### 游戏 Games
 
-- [NGA 玩家社区](https://bbs.nga.cn/)
-- [巴哈姆特](https://www.gamer.com.tw/)
-- [TapTap](https://www.taptap.com/)
-- [FANDOM](https://www.fandom.com/explore-zh-tw?uselang=zh-tw)
-- [Gamerch](https://gamerch.com/)
-- [GameKee](https://www.gamekee.com/)
-- [8591](https://www.8591.com.tw/)
-- [PLUG](https://www.plug.game/)
+- [巴哈姆特(TW)](https://www.gamer.com.tw/)
+- [AppMedia(TW)](https://appmedia.jp/)
+- [8591(TW)](https://www.8591.com.tw/)
+- [PLUG(EN/TW)](https://www.plug.game/)
+- [FANDOM(TW)](https://www.fandom.com/explore-zh-tw?uselang=zh-tw)
+- [Gamerch(JP)](https://gamerch.com/)
+- [AppMedia(JP)](https://appmedia.jp/)
+- [GameWith(JP)](https://gamewith.jp/)
+- [TapTap(CN)](https://www.taptap.com/)
+- [NGA 玩家社区(CN)](https://bbs.nga.cn/)
+- [GameKee(CN)](https://www.gamekee.com/)
+
 
 ### 设计 Design
 
