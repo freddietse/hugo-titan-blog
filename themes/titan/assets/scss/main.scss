@@ -78,7 +78,8 @@ body {
         @apply border;
     }
 
-    p>code {
+    p>code,
+    li>code {
         @apply text-pink-600;
         @apply text-base;
     }
